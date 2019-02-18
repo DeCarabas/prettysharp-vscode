@@ -98,17 +98,6 @@ class PrettySharpDocumentFormattingEditProvider
 }
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log(
-    'Congratulations, your extension "prettysharp-vscode" is now active!'
-  );
-
-  context.subscriptions.push(
-    vscode.commands.registerCommand("extension.helloWorld", () => {
-      // Display a message box to the user
-      vscode.window.showInformationMessage("Hello DOGGGGGGG!");
-    })
-  );
-
   context.subscriptions.push(
     vscode.languages.registerDocumentFormattingEditProvider(
       "csharp",
