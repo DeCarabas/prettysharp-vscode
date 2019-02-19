@@ -1,65 +1,46 @@
-# prettysharp-vscode README
+# PrettySharp: Automatic C# Code Formatting for VS Code
 
-This is the README for your extension "prettysharp-vscode". After writing up a brief description, we recommend including the following sections.
+Integrate [the PrettySharp code formatter](https://github.com/DeCarabas/PrettySharp) with VS Code.
+
+PrettySharp is an automatic code-formatter, which (mostly) ignores your whitespace and instead normalizes all the whitespace in your code to a standard, including breaking lines at a mazimum line length.
+(For more information see [the PrettySharp repository.](https://github.com/DeCarabas/PrettySharp))
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Presumably you want to keep your C# looking pretty, and so what you really want to do is to enable set the `editor.formatOnSave` setting to `true`.
+Then every time you save a well-formatted C# document, it will be automatically formatted so that it looks pretty.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+If you want to format your document by hand, you may also run the "Format Document" command.
+But why wouldn't you want to format on save?
+Don't you want your code to look pretty?
+What are you, some kind of animal?
+We're trying to have a civilized programming language here, people!
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+You need to have prettysharp installed somewhere.
+(Get it from [the PrettySharp respository.](https://github.com/DeCarabas/PrettySharp))
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+- `prettysharp.executable`: The full path to the prettysharp binary.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+This extension has some limitations we know about already:
+
+- This does not currently support the "Format Selection" command.
+
+If your document isn't formatting at all, try formatting it manually with the "Format Document" command.
+PrettySharp won't format anything it can't parse, so if your C# is syntactically incorrect in some way it probably won't get pretty-printed either.
+Try fixing the file so that it builds, and then format it.
+
+If you have concerns about the tool incorrectly formatting your code (or failing to format it at all), check in with [the PrettySharp tool itself.](https://github.com/DeCarabas/PrettySharp)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release.
